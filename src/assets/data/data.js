@@ -52,11 +52,11 @@ export const data = {
     galeri: [
         {
             id: 1,
-            image: './src/assets/images/1.JPG'
+            image: './src/assets/images/1.jpg'
         },
         {
             id: 2,
-            image: './src/assets/images/2.JPG'
+            image: './src/assets/images/2.jpg'
         },
         {
             id: 3,
