@@ -1,0 +1,121 @@
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('../assets/images/Couple.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    color: #fff;
+    transition: all 2s ease-in;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: -1;
+    backdrop-filter: blur(1px);
+}
+
+.welcome.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.welcome.hide {
+    top: -100%;
+    opacity: 0;
+}
+
+.welcome h2 {
+    font-size: 2.4rem;
+    font-family: var(--sacramento);
+    font-weight: 400;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.welcome figure {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    flex-direction: inherit;
+    margin: 1rem 0;
+}
+
+.welcome figure img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.welcome figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.welcome figure figcaption {
+    font-size: var(--fontSize-heading-base);
+    font-family: var(--sacramento);
+    font-weight: 400;
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+.welcome p span {
+    font-size: 2rem;
+    margin: 1rem 0;
+    display: block;
+}
+
+.welcome button {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    gap: 0.4rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.welcome button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.welcome button i {
+    font-size: 1.2rem;
+}

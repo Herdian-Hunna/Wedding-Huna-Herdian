@@ -1,0 +1,193 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url('../assets/images/Couple.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    transition: all 2s ease;
+    transform: translateY(-100%);
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 0;
+    backdrop-filter: blur(1px);
+}
+
+.home > * {
+    position: relative;
+    z-index: 1;
+}
+
+.home.active {
+    transform: translateY(0);
+}
+
+.home h2 {
+    font-size: 2.4rem;
+    font-family: var(--sacramento);
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+    letter-spacing: 1px;
+}
+
+.home figure {
+    margin: 2rem auto 0;
+}
+
+.home figure img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.home figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.home figure figcaption {
+    margin: 0 0 0.5rem;
+    font-weight: 400;
+    font-family: var(--sacramento);
+    font-size: var(--fontSize-heading-lg);
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+}
+
+.home h3 {
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home .home-time {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home .home-time div {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.home .home-time div:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.home .home-time div p {
+    font-size: 0.8rem;
+    line-height: normal;
+    color: #fff;
+    font-weight: 600;
+}
+
+.home .home-time div p span {
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.home a {
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    margin: 1rem auto;
+    border-radius: 50px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.home a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.home a i {
+    font-size: 1.2rem;
+}
+
+.home .scroll_down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home .scroll_down i {
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.home .scroll_down span {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.home svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14rem;
+    z-index: 0;
+    opacity: 0.3;
+}
